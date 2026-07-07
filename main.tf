@@ -10,6 +10,7 @@ terraform {
     bucket = "neelu-testing-bucket"
     key    = "workspace.statefile"
     region = "us-east-1"
+    dynamodb_table = "dynamodb-state-locking"
   }
 }
 
