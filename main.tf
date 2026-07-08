@@ -5,14 +5,14 @@ provider "aws" {
   region = var.aws_region
 }
 
-terraform {
-  backend "s3" {
-    bucket = "neelu-testing-bucket"
-    key    = "workspace.statefile"
-    region = "us-east-1"
-    dynamodb_table = "dynamodb-state-locking"
-  }
-}
+# terraform {
+#   backend "s3" {
+#     bucket = "neelu-testing-bucket"
+#     key    = "workspace.statefile"
+#     region = "us-east-1"
+#     # dynamodb_table = "dynamodb-state-locking"
+#   }
+# }
 
 
 resource "aws_vpc" "default" {
